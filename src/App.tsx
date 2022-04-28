@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from './components/header'
 import './App.css';
 
 interface Crypto {
@@ -46,6 +47,7 @@ const App = () => {
   }, [])
   return (
     <div className="App">
+      <Header/>
       <h1>Crypto tracker</h1>
       <label htmlFor="search">Search</label>
       <input type="text" id='search' placeholder='Search' value={search} onChange={(e) => searchCoins(e.target.value)}/>
