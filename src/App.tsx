@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/header'
 import Input from './components/Input'
 import Datatable from './components/Datatable'
+import searchIcon from './assets/search.svg'
 import { Coin } from './types/Coin'
 import './App.css';
 
@@ -31,8 +32,10 @@ const App = () => {
       <Header />
       <main>
         <h1 className='sr-only'>Crypto tracker</h1>
-        <Input name='search' state={search} setState={setSearch}/>
-        <Datatable data={filteredCoins} />
+        <div>
+          <Input name='search' state={search} setState={searchCoins} icon={searchIcon}/>
+          <Datatable data={filteredCoins} />
+        </div>
       </main>
     </div>
   );

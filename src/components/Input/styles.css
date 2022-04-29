@@ -1,0 +1,31 @@
+.input_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 240px;
+    margin: 30px 0;
+}
+
+.input_container label {
+    color: var(--color-black);
+    font-weight: bold;
+}
+
+.input_container label::first-letter {
+    text-transform: uppercase;
+}
+
+.input_container input {
+    border-radius: 9px;
+    border: solid 1px var(--color-gray);
+    height: 38px;
+    padding: 12px 20px;
+}
+.input_container img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 9px;
+    right: 9px;
+}
