@@ -23,6 +23,7 @@ body{
   font-weight: bold;
   display: grid;
   align-items: center;
+  height: 38px;
 }
 
 .primary {

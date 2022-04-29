@@ -4,5 +4,6 @@
     padding: 25px 8vw;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
 }
