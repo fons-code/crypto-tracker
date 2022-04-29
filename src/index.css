@@ -3,6 +3,9 @@
   --color-gray: hsl(227, 22%, 51%);
   --color-primary: hsl(176, 81%, 53%);
   --color-black: hsl(227, 71%, 22%);
+  --color-red: hsla(0, 80%, 52%, 1);
+  --color-green: hsla(115, 81%, 29%, 1);
+  --color-background: linear-gradient(180deg, rgba(206, 229, 240, 0.3) 0%, rgba(243, 248, 250, 0.61) 0.01%, rgba(249, 253, 252, 0) 100%), #FFFFFF;
 }
 
 *{
@@ -14,6 +17,7 @@
 body{
   color: var(--color-black);
   font-family: 'Lato', sans-serif;
+  background-color: var(--color-background);
 }
 
 .sr-only {
@@ -44,5 +48,13 @@ main {
 .primary {
   background-color: var(--color-primary);
   color: var(--color-black);
-
+}
+.secondary {
+  color: var(--color-gray);
+}
+.danger {
+  color: var(--color-red);
+}
+.success {
+  color: var(--color-green);
 }

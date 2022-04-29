@@ -12,7 +12,7 @@ const Input : React.FC<Props> = ({name,state, setState, icon}) => {
       <div className='input_container'>
         <label htmlFor={name}>{name}</label>
         <input type="text" id='search' placeholder={name} value={state} onChange={(e) => setState(e.target.value)} />
-        <img src={icon} alt=""/>
+        {icon && <img src={icon} alt=""/>}
       </div>
   )
 }
