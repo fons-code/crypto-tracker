@@ -12,6 +12,7 @@ const colorizeNumber = (num : number) => num > 0 ? 'success' : 'danger'
 
 const Datatable : React.FC<Props> = ({data}) => {
   return (
+    <div className='table_container'>
     <table>
         <thead>
           <tr>
@@ -42,6 +43,7 @@ const Datatable : React.FC<Props> = ({data}) => {
             }
         </tbody>
       </table>
+    </div>
   )
 }
 export default Datatable
