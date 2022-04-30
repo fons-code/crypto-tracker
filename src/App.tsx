@@ -7,7 +7,6 @@ import Login from './pages/Login'
 import Header from './components/header'
 import './App.css';
 
-
 const App = () => {
   return (
     <div className="App">
