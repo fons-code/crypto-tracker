@@ -6,16 +6,20 @@ import Login from './pages/Login'
 //components
 import Header from './components/header'
 import './App.css';
+//context
+import { AuthProvider } from './context/AuthContext'
 
 const App = () => {
   return (
     <div className="App">
       <Header />
       <main>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login/>}/>
-        </Routes>
+        <AuthProvider>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+          </Routes>
+        </AuthProvider>
       </main>
     </div>
   );

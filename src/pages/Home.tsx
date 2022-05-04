@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Input from '../components/Input'
 import Datatable from '../components/Datatable'
 import searchIcon from '../assets/search.svg'
+import {useAuth} from '../hooks/useAuth'
 
 import { Coin } from '../types/Coin'
 
@@ -25,6 +26,7 @@ export default function Home() {
   useEffect(() => {
     getData()
   }, [])
+        console.log(useAuth())
   return (
     <div>
         <h1 className='sr-only'>Crypto tracker</h1>
