@@ -5,13 +5,14 @@ interface Props {
     state: string
     setState: React.Dispatch<React.SetStateAction<string>> | ((name: string) => void)
     icon?:string
+    type?: string
 }
 
-const Input : React.FC<Props> = ({name,state, setState, icon}) => {
+const Input : React.FC<Props> = ({name,state, setState, icon, type}) => {
   return (
       <div className='input_container'>
-        <label htmlFor={name}>{name}</label>
-        <input type="text" id='search' placeholder={name} value={state} onChange={(e) => setState(e.target.value)} />
+        <label htmlFor={name.toLowerCase()}>{name}</label>
+        <input type={type || "text"} id={name.toLowerCase()} placeholder={name} value={state} onChange={(e) => setState(e.target.value)} />
         {icon && <img src={icon} alt=""/>}
       </div>
   )
