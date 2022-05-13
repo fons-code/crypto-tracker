@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom'        
+import {Button} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import Input from '../components/Input'
@@ -34,7 +35,7 @@ export default function Signup() {
         <Input name='email' state={email} setState={setEmail} type="email" />
         <Input name='password' state={password} setState={setPassword} type="password" />
         <Input name='Repeat password' state={repeatPassword} setState={setRepeatPassword} />
-        <button>Sign up</button>
+        <Button>Sign up</Button>
       </form>
       {error && <p>{error}</p>}
       <Link to="/login">
