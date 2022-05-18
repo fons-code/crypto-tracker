@@ -31,10 +31,6 @@ body{
   border: 0;    
 }
 
-main {
-  margin: 0 8vw;
-}
-
 .button {
   padding: 0 30px;
   border-radius: 5px;
