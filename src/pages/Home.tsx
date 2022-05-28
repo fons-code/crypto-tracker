@@ -15,6 +15,7 @@ import { Coin } from "../types/Coin";
 
 export default function Home() {
   const [cryptoData, setCryptoData] = useState<Coin[] | []>([]);
+  const [isCryptoDataLoading, setIsCryptoDataLoading] = useState(false)
   const [search, setSearch] = useState<string>("");
 
   const [filteredCoins, setFilteredCoins] = useState<Coin[] | []>([]);
@@ -33,8 +34,10 @@ export default function Home() {
     const data = await res.json();
     setCryptoData(data);
     setFilteredCoins(data);
+    setIsCryptoDataLoading(false)
   };
   useEffect(() => {
+    setIsCryptoDataLoading(true)
     getData();
   }, []);
   console.log(useAuth());
@@ -57,7 +60,7 @@ export default function Home() {
           </InputGroup>
         </FormControl>
         </Box>
-        <Datatable data={filteredCoins} />
+        <Datatable data={filteredCoins} isLoading={isCryptoDataLoading}/>
       </div>
     </VStack>
   );
